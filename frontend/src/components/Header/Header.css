@@ -1,9 +1,11 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+    background: url('/home.jpg') no-repeat center center;
+    background-size: cover;
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .header-contents {
@@ -20,13 +22,13 @@
 
 .header-contents h2 {
     font-weight: 500;
-    color: white;
+    color: black;
     font-size: max(4.5vw, 22px);
 }
 
 
 .header-contents p {
-    color: white;
+    color: black;
     font-size: 1vw;
 }
 
