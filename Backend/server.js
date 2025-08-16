@@ -12,7 +12,15 @@ const port = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://food-order-online-web-frontend.vercel.app",
+    "https://food-order-online-web-admin.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173"
+  ],
+  credentials: true
+}));
 
 // DB connection
 connectDB();
