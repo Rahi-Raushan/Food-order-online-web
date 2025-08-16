@@ -30,11 +30,13 @@ export const addfood = async (req, res) => {
 // List Food Items
 export const listfood = async (req, res) => {
   try {
+    console.log("Fetching food list...");
     const foods = await foodModel.find();
+    console.log("Found foods:", foods.length);
     res.json({ success: true, foods });
   } catch (error) {
     console.error("Error in listfood:", error);
-    res.status(500).json({ success: false, message: "Error fetching food list" });
+    res.status(500).json({ success: false, message: "Error fetching food list", error: error.message });
   }
 };
 
